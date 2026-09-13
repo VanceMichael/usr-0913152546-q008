@@ -1,0 +1,1 @@
+import java.sql.*;public class App{public static void main(String[]a)throws Exception{try(Connection c=DriverManager.getConnection("jdbc:sqlite:data.db")){c.createStatement().execute("create table if not exists tasks(id integer primary key,state text)");System.out.println("协调器已启动");}}}
